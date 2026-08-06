@@ -1,151 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>タイトル</title>
-  <meta charset="UTF-8">
+	<title>タイトル</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>	</h1>
-    <p>	</p>
-  </header>
-  <main>
-    <section class="1st-spring">
-      <h2>1春</h2>
-      <table>
-        <tr>
-          <th>時限</th>
-			    <th>月</th>
-			    <th>火</th>
-			    <th>水</th>
-	    		<th>木</th>
-    			<th>金</th>
-		    	<th>土</th>
-        </tr>
-        <tr>
-          <td>1限</td>
-    			<td>英語DSC</td>
-		    	<td>力学1</td>
-    			<td>フランス語A</td>
-		    	<td></td>
-		    	<td>英語E</td>
-			    <td></td>
-        </tr>
-        <tr>
-          <td>2限</td>
-    			<td>線形代数1</td>
-		    	<td>基礎物理学演習1</td>
-		    	<td>微分積分1</td>
-    			<td>物理入門ゼミナール</td>
-	    		<td></td>
-			    <td>英語RW</td>
-        </tr>
-        <tr>
-          <td>3限</td>
-    			<td>フランス語1</td>
-		    	<td>コンピュータ実験1</td>
-    			<td>美と生命について</td>
-		    	<td></td>
-			    <td>物理学概論</td>
-			    <td></td>
-        </tr>
-        <tr>
-          <td>4限</td>
-    			<td></td>
-		    	<td></td>
-		    	<td></td>
-			    <td></td>
-    			<td>キリスト教史に学ぶ多文化共生</td>
-		    	<td></td>
-        </tr>
-        <tr>
-          <td>5限</td>
-    			<td></td>
-		    	<td></td>
-    			<td></td>
-		    	<td></td>
-    			<td></td>
-		    	<td></td>
-        </tr>
-        <tr>
-          <td>6限</td>
-    			<td></td>
-		    	<td></td>
-		    	<td></td>
-    			<td></td>
-		    	<td></td>
-		    	<td></td>
-        </tr>
-      </table>
-    </section>
-    <section class="1st-autumn">
-      <h2>1秋</h2>
-      <table>
-        <tr>
-          <th>時限</th>
-			    <th>月</th>
-			    <th>火</th>
-			    <th>水</th>
-	    		<th>木</th>
-    			<th>金</th>
-		    	<th>土</th>
-        </tr>
-        <tr>
-          <td>1限</td>
-    			<td>英語DBT</td>
-		    	<td>力学2</td>
-    			<td>フランス語B</td>
-		    	<td></td>
-		    	<td>英語P</td>
-			    <td>栄養の科学</td>
-        </tr>
-        <tr>
-          <td>2限</td>
-    			<td>線形代数2</td>
-		    	<td>基礎物理学演習2</td>
-		    	<td>微分積分2</td>
-    			<td></td>
-	    		<td></td>
-			    <td>英語RW</td>
-        </tr>
-        <tr>
-          <td>3限</td>
-    			<td>フランス語2</td>
-		    	<td>コンピュータ実験2</td>
-    			<td></td>
-		    	<td></td>
-			    <td>熱力学</td>
-			    <td></td>
-        </tr>
-        <tr>
-          <td>4限</td>
-    			<td></td>
-		    	<td></td>
-		    	<td></td>
-			    <td>化学と自然</td>
-    			<td></td>
-		    	<td></td>
-        </tr>
-        <tr>
-          <td>5限</td>
-    			<td>基礎数学演習</td>
-		    	<td></td>
-    			<td></td>
-		    	<td></td>
-    			<td>JAXA宇宙科学技術講義</td>
-		    	<td></td>
-        </tr>
-        <tr>
-          <td>6限</td>
-    			<td></td>
-		    	<td></td>
-		    	<td></td>
-    			<td></td>
-		    	<td></td>
-		    	<td></td>
-        </tr>
-      </table>
-    </section>
-    
+	<header>
+    	<h1>	</h1>
+    	<p>	</p>
+		<button onclick="toggleView()" class="toggle-btn">🔄 表示を切り替える</button>
+	</header>
+	<main>
+		<div id="timeTable">
+			<section class="1st-spring">
+				<h2>1春</h2>
+				<table>
+					<tr>
+						<th>時限</th>
+						<th>月</th>
+						<th>火</th>
+						<th>水</th>
+						<th>木</th>
+						<th>金</th>
+						<th>土</th>
+					</tr>
+					<tr>
+						<td>1限</td>
+						<td id="月-1"></td>
+						<td id="火-1"></td>
+						<td id="水-1"></td>
+						<td id="木-1"></td>
+						<td id="金-1"></td>
+						<td id="土-1"></td>
+					</tr>
+					<tr>
+						<td>2限</td>
+						<td id="月-2"></td>
+						<td id="火-2"></td>
+						<td id="水-2"></td>
+						<td id="木-2"></td>
+						<td id="金-2"></td>
+						<td id="土-2"></td>
+					</tr>
+					<tr>
+						<td>3限</td>
+						<td id="月-3"></td>
+						<td id="火-3"></td>
+						<td id="水-3"></td>
+						<td id="木-3"></td>
+						<td id="金-3"></td>
+						<td id="土-3"></td>
+					</tr>
+					<tr>
+						<td>4限</td>
+						<td id="月-4"></td>
+						<td id="火-4"></td>
+						<td id="水-4"></td>
+						<td id="木-4"></td>
+						<td id="金-4"></td>
+						<td id="土-4"></td>
+					</tr>
+					<tr>
+						<td>5限</td>
+						<td id="月-5"></td>
+						<td id="火-5"></td>
+						<td id="水-5"></td>
+						<td id="木-5"></td>
+						<td id="金-5"></td>
+						<td id="土-5"></td>
+					</tr>
+					<tr>
+						<td>6限</td>
+						<td id="月-6"></td>
+						<td id="火-6"></td>
+						<td id="水-6"></td>
+						<td id="木-6"></td>
+						<td id="金-6"></td>
+						<td id="土-6"></td>
+					</tr>
+				</table>
+			</section>
+		</div>
+		<div id="listview" style="display: none;">
+			<h2>1春</h2>
+			<ul id="courselist"></ul>
+		</div>
+	</main>
+
+	<script src="main.js"></script>
 </body>
 </html>

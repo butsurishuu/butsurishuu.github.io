@@ -1,0 +1,61 @@
+/* サイト全体の設定 */
+body {
+    font-family: sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ボタンのデザイン */
+.toggle-btn {
+    background-color: #0369a1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.toggle-btn:hover {
+    background-color: #0284c7;
+}
+
+/* 表のデザイン */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #cbd5e1;
+    padding: 15px 5px;
+    text-align: center;
+    width: 16%;
+}
+th {
+    background-color: #f1f5f9;
+}
+td {
+    height: 50px;
+    font-weight: bold;
+}
+
+/* リストのデザイン */
+ul {
+    line-height: 2;
+}
+
+/* === 教科ごとの色分け（自動で適用されます） === */
+.physics { background-color: #ffedd5; } /* 薄いオレンジ */
+.math { background-color: #e0f2fe; }    /* 薄い青 */
+.experiment { background-color: #dcfce7; } /* 薄い緑 */
+.astronomy { background-color: #f3e8ff; }  /* 薄い紫 */
